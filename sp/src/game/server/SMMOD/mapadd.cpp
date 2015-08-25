@@ -61,7 +61,13 @@ bool CMapAdd::RunLabel( const char *mapaddMap, const char *szLabel)
 				{
 					Vector SpawnVector = Vector(0,0,0);
 					QAngle SpawnAngle = QAngle(0,0,0);
-			
+					
+					/*
+					//No problem sir
+					const char* ma_origin = pMapAddEnt->GetString("origin", "0 0 0");
+					UTIL_StringToVector(SpawnVector.Base(), ma_origin);
+					*/
+					
 					SpawnVector.x = pMapAddEnt->GetFloat("x", SpawnVector.x);
 					SpawnVector.y = pMapAddEnt->GetFloat("y", SpawnVector.y);
 					SpawnVector.z = pMapAddEnt->GetFloat("z", SpawnVector.z);
